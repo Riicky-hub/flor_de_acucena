@@ -1,10 +1,17 @@
 import React from 'react';
-import { Container } from '../../components/Container';
+import { Paragraph, Title, Container, Button } from '../../globalStyles';
 
 const Home = () => {
   return (
     <Container>
-      <h1>Hello world!</h1>
+      <Title>Lorem ipsum dolor sit amet.</Title>
+      <Paragraph md>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quos ab,
+        quasi aut odio nesciunt placeat accusantium. Rerum, nemo quia?
+      </Paragraph>
+      <Button transparent border config='1px solid #000'>
+        Click here
+      </Button>
     </Container>
   );
 };

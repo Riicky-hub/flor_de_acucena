@@ -64,7 +64,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Tenor Sans';
   }
 `;
 
@@ -78,10 +78,13 @@ export const Container = styled.div`
   @media screen and (max-width: 960px) {
     padding: 0 30px;
   }
+  @media screen and (max-width: 500px) {
+    padding: 0 20px;
+  }
 `;
 
 // TEXTS STYLES
-const TitleSize = `${({ title }) => {
+const TitleSize = ({ title }) => {
   switch (title) {
     case 'sm':
       return 'clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);';
@@ -90,8 +93,8 @@ const TitleSize = `${({ title }) => {
     default:
       return 'clamp(1.125rem, 0.8472rem + 1.1111vw, 1.75rem);';
   }
-}}`;
-const ParagraphSize = `${({ size }) => {
+};
+const ParagraphSize = ({ size }) => {
   switch (size) {
     case 'sm':
       return 'clamp(0.75rem, 0.5278rem + 0.8889vw, 1.25rem);';
@@ -102,8 +105,8 @@ const ParagraphSize = `${({ size }) => {
     default:
       return 'clamp(0.75rem, 0.5278rem + 0.8889vw, 1.25rem);';
   }
-}}`;
-const fontFamily = `${({ roboto }) => (roboto ? 'Roboto' : 'Tenor Sans')}`;
+};
+const fontFamily = ({ roboto }) => (roboto ? 'Roboto' : 'Tenor Sans');
 
 export const Paragraph = styled.p`
   color: ${ParagraphColor};
@@ -122,13 +125,13 @@ export const Title = styled.h2`
 
 // BUTTONS
 export const Button = styled.button`
+  cursor: pointer;
   padding: 12px 33px;
   font-size: clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);
   background: ${({ transparent }) =>
     transparent ? 'transparent' : `${OffBlack}`};
   color: ${({ transparent }) => (transparent ? `${OffBlack}` : `${OffWhite}`)};
-  border: ${({ transparent }) =>
-    transparent ? `border: 1px solid #DEDEDE;` : `none`};
+  border: ${({ border, config }) => (border ? `border: ${config};` : `none`)};
 `;
 
 export default GlobalStyles;
