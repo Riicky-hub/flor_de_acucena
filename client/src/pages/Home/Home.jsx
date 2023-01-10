@@ -1,10 +1,10 @@
 import React from 'react';
-import { Home } from '../../layout';
+import { Hero } from '../../layout';
 
 const HomePage = () => {
   return (
     <div>
-      <Home />
+      <Hero />
     </div>
   );
 };

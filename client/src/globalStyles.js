@@ -1,13 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import {
-  RobotoLight,
-  RobotoLightItalic,
-  RobotoRegular,
-  RobotoRegularItalic,
-  RobotoMedium,
-  RobotoMediumItalic,
-} from './fonts/Roboto';
 import tenorSans from './fonts/Tenor_Sans/TenorSans-Regular.ttf';
+import josefinSans from './fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf';
+import josefinSansItalic from './fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf';
 import {
   TitleColor,
   ParagraphColor,
@@ -24,39 +18,15 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
   }
   @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto-Light'), url(${RobotoLight}) format('TrueType');
-    font-weight: 300;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto-LightItalic'), url(${RobotoLightItalic}) format('TrueType');
-    font-weight: 300;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto-Regular'), url(${RobotoRegular}) format('TrueType');
+    font-family: 'Josefin Sans';
+    src: local('JosefinSans-Regular'), url(${josefinSans}) format('TrueType');
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto-RegularItalic'), url(${RobotoRegularItalic}) format('TrueType');
+    font-family: 'Josefin Sans';
+    src: local('JosefinSansItalic-Regular'), url(${josefinSansItalic}) format('TrueType');
     font-weight: 400;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto-Medium'), url(${RobotoMedium}) format('TrueType');
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto-MediumItalic'), url(${RobotoMediumItalic}) format('TrueType');
-    font-weight: 500;
     font-style: italic;
   }
   // GLOBAL STYLES
@@ -80,6 +50,9 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 500px) {
     padding: 0 20px;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0 15px;
   }
 `;
 
@@ -132,6 +105,8 @@ export const Button = styled.button`
     transparent ? 'transparent' : `${OffBlack}`};
   color: ${({ transparent }) => (transparent ? `${OffBlack}` : `${OffWhite}`)};
   border: ${({ border, config }) => (border ? `border: ${config};` : `none`)};
+  display: flex;
+  align-items: center;
 `;
 
 export default GlobalStyles;

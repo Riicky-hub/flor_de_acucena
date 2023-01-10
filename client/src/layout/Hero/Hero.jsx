@@ -1,7 +1,8 @@
 import React from 'react';
 import { Paragraph, Title, Container, Button } from '../../globalStyles';
+import shopping from '../../assets/icons/heart.svg';
 
-const Home = () => {
+const Hero = () => {
   return (
     <Container>
       <Title>Lorem ipsum dolor sit amet.</Title>
@@ -9,11 +10,12 @@ const Home = () => {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quos ab,
         quasi aut odio nesciunt placeat accusantium. Rerum, nemo quia?
       </Paragraph>
-      <Button transparent border config='1px solid #000'>
+      <Button>
         Click here
+        <img src={shopping} />
       </Button>
     </Container>
   );
 };
 
-export default Home;
+export default Hero;
