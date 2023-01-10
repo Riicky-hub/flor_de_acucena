@@ -8,6 +8,12 @@ import {
   RobotoMediumItalic,
 } from './fonts/Roboto';
 import tenorSans from './fonts/Tenor_Sans/TenorSans-Regular.ttf';
+import {
+  TitleColor,
+  ParagraphColor,
+  OffBlack,
+  OffWhite,
+} from './constants/colors';
 
 const GlobalStyles = createGlobalStyle`
   // FONTS
@@ -75,7 +81,6 @@ export const Container = styled.div`
 `;
 
 // TEXTS STYLES
-const TitleColor = '#202224';
 const TitleSize = `${({ title }) => {
   switch (title) {
     case 'sm':
@@ -86,7 +91,6 @@ const TitleSize = `${({ title }) => {
       return 'clamp(1.125rem, 0.8472rem + 1.1111vw, 1.75rem);';
   }
 }}`;
-const ParagraphColor = '#727272';
 const ParagraphSize = `${({ size }) => {
   switch (size) {
     case 'sm':
@@ -116,6 +120,15 @@ export const Title = styled.h2`
   font-weight: 400;
 `;
 
-// Buttons
+// BUTTONS
+export const Button = styled.button`
+  padding: 12px 33px;
+  font-size: clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);
+  background: ${({ transparent }) =>
+    transparent ? 'transparent' : `${OffBlack}`};
+  color: ${({ transparent }) => (transparent ? `${OffBlack}` : `${OffWhite}`)};
+  border: ${({ transparent }) =>
+    transparent ? `border: 1px solid #DEDEDE;` : `none`};
+`;
 
 export default GlobalStyles;
