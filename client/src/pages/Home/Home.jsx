@@ -1,11 +1,13 @@
 import React from 'react';
 import { Hero } from '../../layout';
+import { HomeNavbar } from './styles';
 
 const HomePage = () => {
   return (
-    <div>
+    <>
+      <HomeNavbar />
       <Hero />
-    </div>
+    </>
   );
 };
 

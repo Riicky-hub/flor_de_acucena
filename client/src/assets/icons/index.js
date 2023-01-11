@@ -29,3 +29,6 @@ export { default as tag } from './tag.svg';
 export { default as twitter } from './twitter.svg';
 export { default as upAlt } from './upAlt.svg';
 export { default as youtube } from './youtube.svg';
+export { default as bulletOff } from './bulletOff.svg';
+export { default as bulletOn } from './bulletOn.svg';
+export { default as bulletOrange } from './bulletOrange.svg';

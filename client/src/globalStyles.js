@@ -2,6 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import tenorSans from './fonts/Tenor_Sans/TenorSans-Regular.ttf';
 import josefinSans from './fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf';
 import josefinSansItalic from './fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf';
+import bodoniModa from './fonts/Bodoni_Moda/static/BodoniModa_18pt/BodoniModa_18pt-SemiBold.ttf';
+import bodoniModaItalic from './fonts/Bodoni_Moda/static/BodoniModa_18pt/BodoniModa_18pt-SemiBoldItalic.ttf';
 import {
   TitleColor,
   ParagraphColor,
@@ -27,6 +29,18 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Josefin Sans';
     src: local('JosefinSansItalic-Regular'), url(${josefinSansItalic}) format('TrueType');
     font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Bondoni Moda';
+    src: local('BondoniModa-SemiBold'), url(${bodoniModa}) format('TrueType');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Bondoni Moda';
+    src: local('BondoniModaItalic-SemiBold'), url(${bodoniModaItalic}) format('TrueType');
+    font-weight: 700;
     font-style: italic;
   }
   // GLOBAL STYLES

@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import { Container } from '../../globalStyles';
+
+export const NavbarContainer = styled(Container)`
+  background: ${({ bg }) => (bg ? bg : 'transparent')};
+`;
 
 export const Nav = styled.nav`
-  background: transparent;
-  padding: 20px 0;
+  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

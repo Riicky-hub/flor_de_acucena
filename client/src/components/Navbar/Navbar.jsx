@@ -1,11 +1,10 @@
 import React from 'react';
 import { menu, search, shoppingBag } from '../../assets/icons';
-import { Logo, Nav, Icon, Options } from './styles';
-import { Container } from '../../globalStyles';
+import { Logo, Nav, Icon, Options, NavbarContainer } from './styles';
 
 const Navbar = () => {
   return (
-    <Container>
+    <NavbarContainer bg='#E6E9EE'>
       <Nav>
         <Icon src={menu} mr='15px' />
         <Logo>
@@ -19,7 +18,7 @@ const Navbar = () => {
           <Icon src={shoppingBag} ml='5px' />
         </Options>
       </Nav>
-    </Container>
+    </NavbarContainer>
   );
 };
 

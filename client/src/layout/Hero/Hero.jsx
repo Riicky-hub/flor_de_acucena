@@ -1,20 +1,37 @@
 import React from 'react';
-import { Paragraph, Title, Container, Button } from '../../globalStyles';
-import shopping from '../../assets/icons/heart.svg';
+import {
+  HeroContainer,
+  HeroTitles,
+  HeroTitle,
+  HeroButton,
+  Icons,
+  Icon,
+  HeroButtons,
+  HeroSpace,
+} from './styles';
+import { bulletOff, bulletOn } from '../../assets/icons';
 
 const Hero = () => {
   return (
-    <Container>
-      <Title>Lorem ipsum dolor sit amet.</Title>
-      <Paragraph md>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quos ab,
-        quasi aut odio nesciunt placeat accusantium. Rerum, nemo quia?
-      </Paragraph>
-      <Button>
-        Click here
-        <img src={shopping} />
-      </Button>
-    </Container>
+    <HeroContainer>
+      <HeroSpace>
+        <HeroTitles>
+          <div>
+            <HeroTitle>Luxury</HeroTitle>
+            <HeroTitle pl='15px'>Fashion</HeroTitle>
+            <HeroTitle>& Accessories</HeroTitle>
+          </div>
+        </HeroTitles>
+      </HeroSpace>
+      <HeroButtons>
+        <HeroButton>Explore Collection</HeroButton>
+        <Icons>
+          <Icon src={bulletOn} />
+          <Icon src={bulletOff} />
+          <Icon src={bulletOff} />
+        </Icons>
+      </HeroButtons>
+    </HeroContainer>
   );
 };
 
