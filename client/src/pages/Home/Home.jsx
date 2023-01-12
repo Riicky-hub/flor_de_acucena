@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero } from '../../layout';
+import { Hero, NewArrival } from '../../layout';
 import { HomeNavbar } from './styles';
 
 const HomePage = () => {
@@ -7,6 +7,7 @@ const HomePage = () => {
     <>
       <HomeNavbar />
       <Hero />
+      <NewArrival />
     </>
   );
 };

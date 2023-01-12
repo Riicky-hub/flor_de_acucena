@@ -20,10 +20,6 @@ export const Icon = styled.img`
   margin: 0 27px;
 `;
 
-export const Line = styled.img`
-  width: 150px;
-`;
-
 export const Text = styled(Paragraph)`
   color: black;
   letter-spacing: 2px;

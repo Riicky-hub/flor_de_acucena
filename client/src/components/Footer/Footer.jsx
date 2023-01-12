@@ -4,14 +4,12 @@ import {
   Div,
   Icon,
   ContainerFooter,
-  Line,
   Text,
   ButtonsDiv,
   FooterDiv,
 } from './styles';
-import { Button } from '../../globalStyles';
+import { Line, Button } from '../../globalStyles';
 import { instagram, twitter, youtube } from '../../assets/icons';
-import line from '../../assets/bg-frames/lineFrame.svg';
 
 const Footer = () => {
   return (
@@ -28,13 +26,13 @@ const Footer = () => {
             <Icon src={youtube} />
           </Link>
         </Div>
-        <Line src={line} />
+        <Line />
         <Div>
           <Text>support@openui.design</Text>
           <Text>+60 825 876</Text>
           <Text>08:00 - 22:00 - Everyday</Text>
         </Div>
-        <Line src={line} />
+        <Line />
         <ButtonsDiv>
           <Button transparent>About</Button>
           <Button transparent>Contact</Button>

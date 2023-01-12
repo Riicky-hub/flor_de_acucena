@@ -10,6 +10,7 @@ import {
   OffBlack,
   OffWhite,
 } from './constants/colors';
+import line from './assets/bg-frames/lineFrame.svg';
 
 const GlobalStyles = createGlobalStyle`
   // FONTS
@@ -71,14 +72,14 @@ export const Container = styled.div`
 `;
 
 // TEXTS STYLES
-const TitleSize = ({ title }) => {
-  switch (title) {
+const TitleSize = ({ size }) => {
+  switch (size) {
     case 'sm':
       return 'clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);';
     case 'md':
       return 'clamp(1rem, 0.7222rem + 1.1111vw, 1.625rem);';
     default:
-      return 'clamp(1.125rem, 0.8472rem + 1.1111vw, 1.75rem);';
+      return 'clamp(1.25rem, 1.1389rem + 0.4444vw, 1.5rem);';
   }
 };
 const ParagraphSize = ({ size }) => {
@@ -108,6 +109,7 @@ export const Title = styled.h2`
   font-size: ${TitleSize};
   font-style: normal;
   font-weight: 400;
+  text-transform: ${({ cap }) => (cap ? 'uppercase' : 'none')};
 `;
 
 // BUTTONS
@@ -121,6 +123,14 @@ export const Button = styled.button`
   border: ${({ border, config }) => (border ? `border: ${config};` : `none`)};
   display: flex;
   align-items: center;
+`;
+
+// Line
+export const Line = styled.img`
+  content: url(${line});
+  width: 150px;
+  padding-top: ${({ pt }) => (pt ? pt : 0)};
+  padding-bottom: ${({ pb }) => (pb ? pb : 0)};
 `;
 
 export default GlobalStyles;

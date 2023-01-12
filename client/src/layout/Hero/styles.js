@@ -20,7 +20,6 @@ export const HeroTitle = styled(Title)`
   color: rgba(0, 0, 0, 0.5);
   font-weight: 700;
   font-style: italic;
-  text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 35px;
   padding-left: ${({ pl }) => (pl ? pl : 0)};

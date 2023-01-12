@@ -17,9 +17,11 @@ const Hero = () => {
       <HeroSpace>
         <HeroTitles>
           <div>
-            <HeroTitle>Luxury</HeroTitle>
-            <HeroTitle pl='15px'>Fashion</HeroTitle>
-            <HeroTitle>& Accessories</HeroTitle>
+            <HeroTitle cap>Luxury</HeroTitle>
+            <HeroTitle cap pl='15px'>
+              Fashion
+            </HeroTitle>
+            <HeroTitle cap>& Accessories</HeroTitle>
           </div>
         </HeroTitles>
       </HeroSpace>
