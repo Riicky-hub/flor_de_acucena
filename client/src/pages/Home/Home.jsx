@@ -1,5 +1,11 @@
 import React from 'react';
-import { Companies, Hero, NewArrival, Collections } from '../../layout';
+import {
+  Companies,
+  Hero,
+  NewArrival,
+  Collections,
+  Tranding,
+} from '../../layout';
 import { HomeNavbar } from './styles';
 
 const HomePage = () => {
@@ -10,6 +16,7 @@ const HomePage = () => {
       <NewArrival />
       <Companies />
       <Collections />
+      <Tranding />
     </>
   );
 };
