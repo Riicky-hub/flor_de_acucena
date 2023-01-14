@@ -1,15 +1,21 @@
 import styled from 'styled-components';
 import { Container, Title, Button } from '../../globalStyles';
-import heroModel from '../../assets/models/Hero.png';
 
-export const HeroContainer = styled(Container)`
-  height: 100vh;
-  background: url(${heroModel});
-  background-repeat: no-repeat;
+export const HeroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;
+
+export const HeroImg = styled.img`
+  width: 100%;
+  display: block;
+`;
+
+export const HeroContent = styled(Container)`
 `;
 
 export const HeroSpace = styled.div`
-  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -37,14 +43,24 @@ export const HeroButton = styled(Button)`
 
 export const HeroTitles = styled.div`
   display: flex;
+  white-space: nowrap;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const HeroButtons = styled.div`
   display: flex;
+  white-space: nowrap;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translate(-50%);
 `;
 
 export const Icons = styled.div`
