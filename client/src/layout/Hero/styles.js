@@ -16,7 +16,7 @@ export const HeroSpace = styled.div`
 `;
 
 export const HeroTitle = styled(Title)`
-  font-family: 'Bondoni Moda';
+  font-family: 'Bodoni Moda';
   color: rgba(0, 0, 0, 0.5);
   font-weight: 700;
   font-style: italic;

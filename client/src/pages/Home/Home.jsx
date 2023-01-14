@@ -1,5 +1,5 @@
 import React from 'react';
-import { Companies, Hero, NewArrival } from '../../layout';
+import { Companies, Hero, NewArrival, Collections } from '../../layout';
 import { HomeNavbar } from './styles';
 
 const HomePage = () => {
@@ -9,6 +9,7 @@ const HomePage = () => {
       <Hero />
       <NewArrival />
       <Companies />
+      <Collections />
     </>
   );
 };

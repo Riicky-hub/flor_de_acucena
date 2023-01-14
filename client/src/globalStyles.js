@@ -33,13 +33,13 @@ const GlobalStyles = createGlobalStyle`
     font-style: italic;
   }
   @font-face {
-    font-family: 'Bondoni Moda';
+    font-family: 'Bodoni Moda';
     src: local('BondoniModa-SemiBold'), url(${bodoniModa}) format('TrueType');
     font-weight: 700;
     font-style: normal;
   }
   @font-face {
-    font-family: 'Bondoni Moda';
+    font-family: 'Bodoni Moda';
     src: local('BondoniModaItalic-SemiBold'), url(${bodoniModaItalic}) format('TrueType');
     font-weight: 700;
     font-style: italic;
