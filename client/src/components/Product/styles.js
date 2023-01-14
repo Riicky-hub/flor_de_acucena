@@ -10,7 +10,7 @@ export const ProductContainer = styled.div`
 `;
 
 export const ProductImg = styled.img`
-  width: 165px;
+  width: ${({ width }) => (width ? width : '165px')};
   padding-bottom: 5px;
 `;
 

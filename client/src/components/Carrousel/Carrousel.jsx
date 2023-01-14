@@ -3,30 +3,30 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './styles';
+import './styles.css';
 import { Pagination } from 'swiper';
 
 import { girl1, girl2, girl3, girl4 } from '../../assets/models/clothes';
-// import { bulletOff, bulletOn } from '../../assets/icons';
 
 import { Product } from '../index';
+import { Container } from '../../globalStyles';
 
 export default function App() {
   return (
-    <>
+    <Container>
       <Swiper
-        slidesPerView={1.5}
-        spaceBetween={10}
+        slidesPerView={1.3}
+        spaceBetween={5}
         pagination={{
           clickable: false,
-          dynamicBullets: true,
-          // renderBullet: function (index, className) {
-          //   return (
-          //     '<span class="' +
-          //     className +
-          //     '"><img class="pagination-bullet"/></span>'
-          //   );
-          // },
+          // dynamicBullets: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              '"><img class="pagination-bullet"/></span>'
+            );
+          },
         }}
         modules={[Pagination]}
         className='mySwiper'
@@ -36,6 +36,7 @@ export default function App() {
             productImg={girl2}
             productTitle='21WN reversible angora cardigan'
             productPrice={120}
+            ImgWidth='250px'
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -43,12 +44,14 @@ export default function App() {
             productImg={girl1}
             productTitle='21WN reversible angora cardigan'
             productPrice={120}
+            ImgWidth='250px'
           />
         </SwiperSlide>
         <SwiperSlide>
           <Product
             productImg={girl3}
             productTitle='21WN reversible angora cardigan'
+            ImgWidth='250px'
             productPrice={120}
           />
         </SwiperSlide>
@@ -56,10 +59,11 @@ export default function App() {
           <Product
             productImg={girl4}
             productTitle='21WN reversible angora cardigan'
+            ImgWidth='250px'
             productPrice={120}
           />
         </SwiperSlide>
       </Swiper>
-    </>
+    </Container>
   );
 }

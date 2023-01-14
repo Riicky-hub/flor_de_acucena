@@ -1,0 +1,24 @@
+.swiper-pagination-bullet > img {
+  content: url('../../assets/icons/bulletOffGray.svg') !important;
+}
+
+.swiper-pagination-bullet-active > img {
+  content: url('../../assets/icons/bulletOnGray.svg') !important;
+}
+
+.swiper-pagination-bullet {
+  background: none;
+  opacity: 100%;
+}
+
+.pagination-bullet {
+  width: 0.7rem;
+  height: auto;
+}
+
+.swiper {
+  height: auto !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 35px;
+}
