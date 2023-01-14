@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import { Title } from '../../globalStyles';
+import { Container } from '../../globalStyles';
 
-export const TrandingTitle = styled(Title)`
+export const TrendingContainer = styled(Container)`
+  padding-bottom: 20px;
+`;
+
+export const TrendingTitle = styled(Title)`
   letter-spacing: 5px;
   padding-bottom: 15px;
   text-align: center;
 `;
 
-export const TrandingTags = styled.div`
+export const TrendingTags = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);

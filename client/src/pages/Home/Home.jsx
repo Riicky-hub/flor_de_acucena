@@ -4,7 +4,8 @@ import {
   Hero,
   NewArrival,
   Collections,
-  Tranding,
+  Trending,
+  AboutUs,
 } from '../../layout';
 import { HomeNavbar } from './styles';
 
@@ -16,7 +17,8 @@ const HomePage = () => {
       <NewArrival />
       <Companies />
       <Collections />
-      <Tranding />
+      <Trending />
+      <AboutUs />
     </>
   );
 };

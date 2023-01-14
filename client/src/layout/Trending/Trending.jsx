@@ -1,13 +1,12 @@
 import React from 'react';
 import { Tag } from '../../components';
-import { Container } from '../../globalStyles';
-import { TrandingTitle, TrandingTags } from './styles';
+import { TrendingContainer, TrendingTitle, TrendingTags } from './styles';
 
-const Tranding = () => {
+const Trending = () => {
   return (
-    <Container>
-      <TrandingTitle cap>@Trending</TrandingTitle>
-      <TrandingTags>
+    <TrendingContainer>
+      <TrendingTitle cap>@Trending</TrendingTitle>
+      <TrendingTags>
         <Tag>2023</Tag>
         <Tag>spring</Tag>
         <Tag>collection</Tag>
@@ -15,9 +14,9 @@ const Tranding = () => {
         <Tag>dress</Tag>
         <Tag>autumncollection</Tag>
         <Tag>faaclothes</Tag>
-      </TrandingTags>
-    </Container>
+      </TrendingTags>
+    </TrendingContainer>
   );
 };
 
-export default Tranding;
+export default Trending;
