@@ -6,6 +6,7 @@ import {
   Collections,
   Trending,
   AboutUs,
+  Instagram,
 } from '../../layout';
 import { HomeNavbar } from './styles';
 
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Collections />
       <Trending />
       <AboutUs />
+      <Instagram />
     </>
   );
 };

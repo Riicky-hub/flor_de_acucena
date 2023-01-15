@@ -32,3 +32,4 @@ export { default as youtube } from './youtube.svg';
 export { default as bulletOff } from './bulletOff.svg';
 export { default as bulletOn } from './bulletOn.svg';
 export { default as bulletOrange } from './bulletOrange.svg';
+export { default as instagramWhite } from './instagramWhite.svg';
