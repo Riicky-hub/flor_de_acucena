@@ -4,12 +4,7 @@ import josefinSans from './fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf'
 import josefinSansItalic from './fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf';
 import bodoniModa from './fonts/Bodoni_Moda/static/BodoniModa_18pt/BodoniModa_18pt-SemiBold.ttf';
 import bodoniModaItalic from './fonts/Bodoni_Moda/static/BodoniModa_18pt/BodoniModa_18pt-SemiBoldItalic.ttf';
-import {
-  TitleColor,
-  ParagraphColor,
-  OffBlack,
-  OffWhite,
-} from './constants/colors';
+import { TitleColor, ParagraphColor, OffBlack, OffWhite } from './constants/colors';
 import line from './assets/bg-frames/lineFrame.svg';
 
 const GlobalStyles = createGlobalStyle`
@@ -117,8 +112,7 @@ export const Button = styled.button`
   cursor: pointer;
   padding: 12px 33px;
   font-size: clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);
-  background: ${({ transparent }) =>
-    transparent ? 'transparent' : `${OffBlack}`};
+  background: ${({ transparent }) => (transparent ? 'transparent' : `${OffBlack}`)};
   color: ${({ transparent }) => (transparent ? `${OffBlack}` : `${OffWhite}`)};
   border: ${({ border, config }) => (border ? `border: ${config};` : `none`)};
   display: flex;
