@@ -9,21 +9,28 @@ import {
   ProductsContainer,
   ExploreButton,
   ButtonContainer,
-  ButtonIcon,
 } from './styles';
 import { Product } from '../../components';
 import { girl1, girl2, girl3, girl4 } from '../../assets/models/clothes';
 import { forwardArrow, bulletOrange } from '../../assets/icons/index';
 
 const NewArrival = () => {
-  const buttons = document.querySelectorAll('#NewArrivalBtn');
-  const arrButtons = Array.from(buttons);
   function removeSelected() {
-    console.log(arrButtons);
+    const buttons = document.querySelectorAll('#NewArrivalBtn');
+    const arrButtons = Array.from(buttons);
     arrButtons.map((el) => {
       el.removeAttribute('selected');
-      el.removeChild(el.children[1]);
+      if (el.children[1]) el.removeChild(el.children[1]);
     });
+  }
+  function addSelected(element) {
+    const Icon = document.createElement('img');
+    Icon.setAttribute('src', `${bulletOrange}`);
+    Icon.setAttribute('width', `10px`);
+    const div = element.target.parentElement;
+    element.preventDefault();
+    removeSelected();
+    div.appendChild(Icon);
   }
   return (
     <NewArrivalContainer>
@@ -32,25 +39,20 @@ const NewArrival = () => {
         <Line pb='10px' pt='3px' />
       </TextsContainer>
       <ButtonsContainer>
-        <ButtonContainer id='NewArrivalBtn' onClick={() => removeSelected()}>
+        <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
           <NewArrivalButton transparent>All</NewArrivalButton>
-          <ButtonIcon src={bulletOrange} id='icon' />
         </ButtonContainer>
-        <ButtonContainer id='NewArrivalBtn' onClick={() => removeSelected()}>
+        <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
           <NewArrivalButton transparent>Apparel</NewArrivalButton>
-          <ButtonIcon src={bulletOrange} />
         </ButtonContainer>
-        <ButtonContainer id='NewArrivalBtn' onClick={() => removeSelected()}>
+        <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
           <NewArrivalButton transparent>Dress</NewArrivalButton>
-          <ButtonIcon src={bulletOrange} />
         </ButtonContainer>
-        <ButtonContainer id='NewArrivalBtn' onClick={() => removeSelected()}>
+        <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
           <NewArrivalButton transparent>Tshirt</NewArrivalButton>
-          <ButtonIcon src={bulletOrange} />
         </ButtonContainer>
-        <ButtonContainer id='NewArrivalBtn' onClick={() => removeSelected()}>
+        <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
           <NewArrivalButton transparent>Bag</NewArrivalButton>
-          <ButtonIcon src={bulletOrange} />
         </ButtonContainer>
       </ButtonsContainer>
       <ProductsContainer>

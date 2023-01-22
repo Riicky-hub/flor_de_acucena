@@ -34,10 +34,6 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-export const ButtonIcon = styled.img`
-  width: 10px;
-`;
-
 export const ProductsContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
