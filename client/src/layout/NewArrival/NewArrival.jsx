@@ -13,6 +13,7 @@ import {
 import { Product } from '../../components';
 import { girl1, girl2, girl3, girl4 } from '../../assets/models/clothes';
 import { forwardArrow, bulletOrange } from '../../assets/icons/index';
+import { Placeholder } from '../../constants/colors';
 
 const NewArrival = () => {
   function removeSelected() {
@@ -20,6 +21,7 @@ const NewArrival = () => {
     const arrButtons = Array.from(buttons);
     arrButtons.map((el) => {
       el.removeAttribute('selected');
+      el.children[0].style.color = `${Placeholder}`;
       if (el.children[1]) el.removeChild(el.children[1]);
     });
   }
@@ -31,6 +33,7 @@ const NewArrival = () => {
     element.preventDefault();
     removeSelected();
     div.appendChild(Icon);
+    element.target.style.color = 'black';
   }
   return (
     <NewArrivalContainer>
@@ -39,8 +42,11 @@ const NewArrival = () => {
         <Line pb='10px' pt='3px' />
       </TextsContainer>
       <ButtonsContainer>
-        <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
-          <NewArrivalButton transparent>All</NewArrivalButton>
+        <ButtonContainer selected id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
+          <NewArrivalButton style={{ color: 'black' }} transparent>
+            All
+          </NewArrivalButton>
+          <img src={bulletOrange} width='10px' />
         </ButtonContainer>
         <ButtonContainer id='NewArrivalBtn' onClick={(e) => addSelected(e)}>
           <NewArrivalButton transparent>Apparel</NewArrivalButton>
