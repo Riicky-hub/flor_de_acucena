@@ -46,6 +46,13 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-family: 'Tenor Sans';
   }
+  input,
+  textarea,
+  button,
+  select,
+  a {
+      -webkit-tap-highlight-color: transparent;
+  }
 `;
 
 // CONTAINER
@@ -117,6 +124,13 @@ export const Button = styled.button`
   border: ${({ border, config }) => (border ? `border: ${config};` : `none`)};
   display: flex;
   align-items: center;
+  outline: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
 
 // Line
