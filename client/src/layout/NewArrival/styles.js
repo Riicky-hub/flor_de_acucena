@@ -10,9 +10,9 @@ export const NewArrivalContainer = styled(Container)`
 `;
 
 export const NewArrivalButton = styled(Button)`
-  padding: 5px 13px;
+  padding: 2px 13px;
   font-size: 16px;
-  color: ${({ selected }) => (selected ? 'black' : Placeholder)};
+  color: ${Placeholder};
 `;
 
 export const NewArrivalText = styled(Title)`
@@ -26,6 +26,16 @@ export const TextsContainer = styled.div`
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-around;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ButtonIcon = styled.img`
+  width: 10px;
 `;
 
 export const ProductsContainer = styled(Container)`

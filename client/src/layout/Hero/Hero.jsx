@@ -5,13 +5,10 @@ import {
   HeroTitles,
   HeroTitle,
   HeroButton,
-  Icons,
-  Icon,
   HeroButtons,
   HeroSpace,
   HeroImg,
 } from './styles';
-import { bulletOff, bulletOn } from '../../assets/icons';
 import heroModel from '../../assets/models/Hero.png';
 
 const Hero = () => {
@@ -32,11 +29,6 @@ const Hero = () => {
         </HeroSpace>
         <HeroButtons>
           <HeroButton>Explore Collection</HeroButton>
-          <Icons>
-            <Icon src={bulletOn} />
-            <Icon src={bulletOff} />
-            <Icon src={bulletOff} />
-          </Icons>
         </HeroButtons>
       </HeroContent>
     </HeroContainer>

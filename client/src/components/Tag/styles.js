@@ -7,5 +7,6 @@ export const TagButton = styled.button`
   border: none;
   border-radius: 20px;
   padding: 8px;
+  margin: 5px;
   cursor: default;
 `;
