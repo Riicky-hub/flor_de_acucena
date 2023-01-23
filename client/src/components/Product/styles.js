@@ -16,5 +16,6 @@ export const ProductImg = styled.img`
 
 export const ProductTitle = styled(Title)`
   color: ${({ orange }) => (orange ? `${Primary}` : 'black')};
-  padding: 3px 3px;
+  padding: 3px 15px;
+  font-size: 15px;
 `;

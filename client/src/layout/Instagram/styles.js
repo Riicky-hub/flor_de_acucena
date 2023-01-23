@@ -24,4 +24,11 @@ export const InstagramGrid = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 15px;
   padding: 10px 0;
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: 740px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 `;

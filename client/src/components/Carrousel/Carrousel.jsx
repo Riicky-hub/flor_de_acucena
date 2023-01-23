@@ -11,21 +11,29 @@ import { girl1, girl2, girl3, girl4 } from '../../assets/models/clothes';
 import { Product } from '../index';
 import { Container } from '../../globalStyles';
 
+function swiperConfigTablet() {
+  if (window.innerWidth > 705) {
+    return 2.5;
+  } else if (window.innerWidth > 630) {
+    return 2;
+  } else if (window.innerWidth > 510) {
+    return 1.6;
+  } else {
+    return 1.3;
+  }
+}
+
 export default function App() {
   return (
     <Container>
       <Swiper
-        slidesPerView={1.3}
+        slidesPerView={swiperConfigTablet()}
         spaceBetween={5}
         pagination={{
           clickable: false,
           // dynamicBullets: true,
           renderBullet: function (index, className) {
-            return (
-              '<span class="' +
-              className +
-              '"><img class="pagination-bullet"/></span>'
-            );
+            return '<span class="' + className + '"><img class="pagination-bullet"/></span>';
           },
         }}
         modules={[Pagination]}
@@ -36,7 +44,7 @@ export default function App() {
             productImg={girl2}
             productTitle='21WN reversible angora cardigan'
             productPrice={120}
-            ImgWidth='250px'
+            ImgWidth='200px'
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -44,14 +52,14 @@ export default function App() {
             productImg={girl1}
             productTitle='21WN reversible angora cardigan'
             productPrice={120}
-            ImgWidth='250px'
+            ImgWidth='200px'
           />
         </SwiperSlide>
         <SwiperSlide>
           <Product
             productImg={girl3}
             productTitle='21WN reversible angora cardigan'
-            ImgWidth='250px'
+            ImgWidth='200px'
             productPrice={120}
           />
         </SwiperSlide>
@@ -59,7 +67,7 @@ export default function App() {
           <Product
             productImg={girl4}
             productTitle='21WN reversible angora cardigan'
-            ImgWidth='250px'
+            ImgWidth='200px'
             productPrice={120}
           />
         </SwiperSlide>

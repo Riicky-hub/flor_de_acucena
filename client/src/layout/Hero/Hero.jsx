@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   HeroContainer,
   HeroTitles,
@@ -24,16 +24,6 @@ import leftFlower from '../../assets/bg-frames/flowerFrame_02.svg';
 import { Button } from '../../globalStyles';
 
 const Hero = () => {
-  const [, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
-  });
-  useEffect(() => {
-    window.addEventListener('resize', setDimensions);
-    return () => {
-      window.removeEventListener('resize', setDimensions);
-    };
-  }, []);
   return (
     <div style={{ position: 'relative' }}>
       {window.innerWidth < 530 ? (

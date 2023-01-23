@@ -19,6 +19,10 @@ export const Logo = styled.img`
 export const AboutUsParagraph = styled(Paragraph)`
   margin: 20px 0;
   text-align: center;
+  @media only screen and (min-width: 580px) {
+    padding: 0 18%;
+    margin: 10px 0;
+  }
 `;
 
 export const AboutUsGrid = styled.div`
@@ -27,6 +31,9 @@ export const AboutUsGrid = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 7px;
   padding: 15px 0;
+  @media only screen and (min-width: 580px) {
+    grid-gap: 1px;
+  }
 `;
 
 export const AboutUsGridItem = styled.div`

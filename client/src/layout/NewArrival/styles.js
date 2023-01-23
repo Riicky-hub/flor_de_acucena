@@ -42,6 +42,13 @@ export const ProductsContainer = styled(Container)`
   grid-row-gap: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (min-width: 880px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 `;
 
 export const ExploreButton = styled(Button)`
