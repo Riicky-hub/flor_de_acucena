@@ -35,7 +35,7 @@ const Hero = () => {
     };
   }, []);
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       {window.innerWidth < 530 ? (
         <HeroContainer fdColumn>
           <HeroImg src={heroModel} />
@@ -57,21 +57,25 @@ const Hero = () => {
           </div>
         </HeroContainer>
       ) : (
-        <HeroContainerDesktop>
-          <HeroTextsDesktop>
-            <HeroTitleDesktop>Collections</HeroTitleDesktop>
-            <HeroParagraph>you can explore ans shop many differnt collection from various barands here</HeroParagraph>
-            <Button padding='10px 12px'>Explore Collection</Button>
-          </HeroTextsDesktop>
-          <HeroImgContainer>
-            <HeroImgDesktop src={HeroModelDesktop} />
-            <HeroImgFrame src={HeroModelFrame} />
-          </HeroImgContainer>
-          {/* <FlowerFrame src={leftFlower} />
-          <FlowerFrame src={rightFlower} /> */}
-        </HeroContainerDesktop>
+        <>
+          <HeroContainerDesktop>
+            <HeroTextsDesktop>
+              <HeroTitleDesktop>Collections</HeroTitleDesktop>
+              <HeroParagraph>you can explore ans shop many differnt collection from various barands here</HeroParagraph>
+              <Button padding='10px 12px'>Explore Collection</Button>
+            </HeroTextsDesktop>
+            <div style={{ display: 'flex', flex: '1' }}>
+              <HeroImgContainer>
+                <HeroImgDesktop src={HeroModelDesktop} />
+                <HeroImgFrame src={HeroModelFrame} />
+              </HeroImgContainer>
+            </div>
+          </HeroContainerDesktop>
+          <FlowerFrame src={leftFlower} width='90px' bottom='3rem' />
+          <FlowerFrame src={rightFlower} width='100px' bottom='5rem' right='0' />
+        </>
       )}
-    </>
+    </div>
   );
 };
 

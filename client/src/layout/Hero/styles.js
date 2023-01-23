@@ -99,7 +99,6 @@ export const HeroParagraph = styled.p`
 `;
 
 export const HeroImgContainer = styled.div`
-  flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -114,13 +113,12 @@ export const HeroImgDesktop = styled.img`
 export const HeroImgFrame = styled(HeroImgDesktop)`
   z-index: 1;
   position: absolute;
-  right: 15px;
+  left: 8px;
   bottom: 130px;
   transform: translate(3px, 32px);
 `;
 
 export const FlowerFrame = styled.img`
-  width: 30px;
   position: absolute;
   bottom: ${({ bottom }) => (bottom ? bottom : '')};
   right: ${({ right }) => (right ? right : '')};
