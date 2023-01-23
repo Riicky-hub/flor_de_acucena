@@ -1,18 +1,15 @@
 import styled from 'styled-components';
-import { Container, Title, Button } from '../../globalStyles';
+import { Title, Button } from '../../globalStyles';
 
 export const HeroContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ fdColumn }) => (fdColumn ? 'column' : 'row')};
   position: relative;
 `;
 
 export const HeroImg = styled.img`
   width: 100%;
   display: block;
-`;
-
-export const HeroContent = styled(Container)`
 `;
 
 export const HeroSpace = styled.div`
@@ -69,4 +66,63 @@ export const Icons = styled.div`
 
 export const Icon = styled.img`
   width: 15px;
+`;
+
+// DESKTOP STYLES
+
+export const HeroContainerDesktop = styled(HeroContainer)`
+  padding: 0 10%;
+  height: 450px;
+  background: rgb(230,233,238);
+  background: -moz-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+  background: -webkit-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+  background: linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e9ee",endColorstr="#afafaf",GradientType=1);
+`;
+
+export const HeroTextsDesktop = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
+
+export const HeroTitleDesktop = styled.h1`
+  font-weight: 100;
+`;
+
+export const HeroParagraph = styled.p`
+  padding: 25px 10px 25px 0;
+  line-height: 2em;
+  text-transform: capitalize;
+`;
+
+export const HeroImgContainer = styled.div`
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const HeroImgDesktop = styled.img`
+  width: 180px;
+  z-index: 2;
+`;
+
+export const HeroImgFrame = styled(HeroImgDesktop)`
+  z-index: 1;
+  position: absolute;
+  right: 15px;
+  bottom: 130px;
+  transform: translate(3px, 32px);
+`;
+
+export const FlowerFrame = styled.img`
+  width: 30px;
+  position: absolute;
+  bottom: ${({ bottom }) => (bottom ? bottom : '')};
+  right: ${({ right }) => (right ? right : '')};
+  left: ${({ left }) => (left ? left : '')};
 `;
