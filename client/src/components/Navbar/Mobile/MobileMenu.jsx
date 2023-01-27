@@ -31,8 +31,10 @@ const MobileMenu = () => {
               <MenuLink to='/clothes'>Apparel</MenuLink>
               <MenuLink to='/clothes'>Bag</MenuLink>
               <MenuLink to='/clothes'>Shoes</MenuLink>
-              <MenuLink to='/clothes'>Beauty</MenuLink>
               <MenuLink to='/clothes'>Accessories</MenuLink>
+              <MenuLink to='/clothes'>Craft Supplies</MenuLink>
+              <MenuLink to='/clothes'>Tools</MenuLink>
+              <MenuLink to='/clothes'>Art</MenuLink>
             </LinksContainer>
             <ContactContainer>
               <ContactItem>

@@ -12,11 +12,13 @@ import { Product } from '../index';
 import { Container } from '../../globalStyles';
 
 function swiperConfigTablet() {
-  if (window.innerWidth > 705) {
+  if (window.innerWidth >= 850) {
+    return 3;
+  } else if (window.innerWidth >= 705) {
     return 2.5;
-  } else if (window.innerWidth > 630) {
+  } else if (window.innerWidth >= 630) {
     return 2;
-  } else if (window.innerWidth > 510) {
+  } else if (window.innerWidth >= 510) {
     return 1.6;
   } else {
     return 1.3;
@@ -25,7 +27,7 @@ function swiperConfigTablet() {
 
 export default function App() {
   return (
-    <Container>
+    <Container mw>
       <Swiper
         slidesPerView={swiperConfigTablet()}
         spaceBetween={5}

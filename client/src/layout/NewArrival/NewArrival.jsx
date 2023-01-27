@@ -36,7 +36,7 @@ const NewArrival = () => {
     element.target.style.color = 'black';
   }
   return (
-    <NewArrivalContainer>
+    <NewArrivalContainer mw>
       <TextsContainer>
         <NewArrivalText cap>New Arrival</NewArrivalText>
         <Line pb='10px' pt='3px' />

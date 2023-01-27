@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  HerosContainer,
   HeroContainer,
   HeroTitles,
   HeroTitle,
@@ -22,10 +23,12 @@ import HeroModelFrame from '../../assets/bg-frames/HeroDesktopFrame.svg';
 import rightFlower from '../../assets/bg-frames/flowerFrame_01.svg';
 import leftFlower from '../../assets/bg-frames/flowerFrame_02.svg';
 import { Button } from '../../globalStyles';
+import { Navbar } from '../../components';
 
 const Hero = () => {
   return (
-    <div style={{ position: 'relative' }}>
+    <HerosContainer>
+      <Navbar bg='transparent' />
       {window.innerWidth < 530 ? (
         <HeroContainer fdColumn>
           <HeroImg src={heroModel} />
@@ -60,12 +63,12 @@ const Hero = () => {
                 <HeroImgFrame src={HeroModelFrame} />
               </HeroImgContainer>
             </div>
+            <FlowerFrame src={leftFlower} width='90px' bottom='3rem' left='0' />
+            <FlowerFrame src={rightFlower} width='100px' bottom='5rem' right='0' />
           </HeroContainerDesktop>
-          <FlowerFrame src={leftFlower} width='90px' bottom='3rem' />
-          <FlowerFrame src={rightFlower} width='100px' bottom='5rem' right='0' />
         </>
       )}
-    </div>
+    </HerosContainer>
   );
 };
 

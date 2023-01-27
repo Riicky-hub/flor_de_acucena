@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { Title, Button } from '../../globalStyles';
 
+export const HerosContainer = styled.div`
+  background: rgb(230,233,238);
+  background: -moz-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+  background: -webkit-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+  background: linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e9ee",endColorstr="#afafaf",GradientType=1);
+`;
+
 export const HeroContainer = styled.div`
   display: flex;
   flex-direction: ${({ fdColumn }) => (fdColumn ? 'column' : 'row')};
@@ -73,11 +81,7 @@ export const Icon = styled.img`
 export const HeroContainerDesktop = styled(HeroContainer)`
   padding: 0 10%;
   height: 450px;
-  background: rgb(230,233,238);
-  background: -moz-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
-  background: -webkit-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
-  background: linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e9ee",endColorstr="#afafaf",GradientType=1);
+  position: 'relative';
 `;
 
 export const HeroTextsDesktop = styled.div`
@@ -108,6 +112,9 @@ export const HeroImgContainer = styled.div`
 export const HeroImgDesktop = styled.img`
   width: 180px;
   z-index: 2;
+  @media screen and (min-width: 826px) {
+    width: 230px;
+  }
 `;
 
 export const HeroImgFrame = styled(HeroImgDesktop)`
@@ -116,6 +123,9 @@ export const HeroImgFrame = styled(HeroImgDesktop)`
   left: 8px;
   bottom: 130px;
   transform: translate(3px, 32px);
+  @media screen and (min-width: 826px) {
+    bottom: 99px;
+  }
 `;
 
 export const FlowerFrame = styled.img`

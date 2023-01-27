@@ -1,19 +1,9 @@
 import React from 'react';
-import {
-  Companies,
-  Hero,
-  NewArrival,
-  Collections,
-  Trending,
-  AboutUs,
-  Instagram,
-} from '../../layout';
-import { HomeNavbar } from './styles';
+import { Companies, Hero, NewArrival, Collections, Trending, AboutUs, Instagram } from '../../layout';
 
 const HomePage = () => {
   return (
     <>
-      <HomeNavbar />
       <Hero />
       <NewArrival />
       <Companies />

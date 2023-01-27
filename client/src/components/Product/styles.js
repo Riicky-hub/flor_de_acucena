@@ -12,6 +12,10 @@ export const ProductContainer = styled.div`
 export const ProductImg = styled.img`
   width: ${({ width }) => (width ? width : '165px')};
   padding-bottom: 5px;
+  @media screen and (max-width: 365px) {
+    max-width: 100%;
+    height: auto;
+  }
 `;
 
 export const ProductTitle = styled(Title)`

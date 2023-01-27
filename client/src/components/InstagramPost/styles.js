@@ -11,6 +11,10 @@ export const PostContainer = styled(Container)`
     display: block;
     position: relative;
     z-index: -2;
+    @media screen and (max-width: 365px) {
+      max-width: 100%;
+      height: auto;
+    }
   }
   p {
     position: absolute;
