@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import { Title, Button } from '../../globalStyles';
 
 export const HerosContainer = styled.div`
-  background: rgb(230,233,238);
-  background: -moz-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
-  background: -webkit-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
-  background: linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e9ee",endColorstr="#afafaf",GradientType=1);
+  position: relative;
+  @media only screen and (max-width: 930px) {
+    background: rgb(230,233,238);
+    background: -moz-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+    background: -webkit-linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+    background: linear-gradient(225deg, rgba(230,233,238,1) 70%, rgba(175,175,175,0.8267682072829132) 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e9ee",endColorstr="#afafaf",GradientType=1);
+  }
 `;
 
 export const HeroContainer = styled.div`
@@ -76,7 +79,7 @@ export const Icon = styled.img`
   width: 15px;
 `;
 
-// DESKTOP STYLES
+// TABLET STYLES
 
 export const HeroContainerDesktop = styled(HeroContainer)`
   padding: 0 10%;
@@ -133,4 +136,12 @@ export const FlowerFrame = styled.img`
   bottom: ${({ bottom }) => (bottom ? bottom : '')};
   right: ${({ right }) => (right ? right : '')};
   left: ${({ left }) => (left ? left : '')};
+`;
+
+// DESKTOP STYLES
+
+export const DisplayVideo = styled.video`
+  width: 100%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 `;

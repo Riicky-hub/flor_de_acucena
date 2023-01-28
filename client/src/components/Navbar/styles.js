@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom';
 export const NavbarContainer = styled(Container)`
   background: ${({ bg }) => (bg ? bg : 'transparent')};
   @media only screen and (min-width: 930px) {
+    position: absolute;
+    top: 0;
+    z-index: 2;
     background: rgb(0,0,0);
-    background: -moz-linear-gradient(180deg, rgba(0,0,0,0.2497373949579832) 0%, rgba(0,0,0,0) 70%);
-    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.2497373949579832) 0%, rgba(0,0,0,0) 70%);
-    background: linear-gradient(180deg, rgba(0,0,0,0.2497373949579832) 0%, rgba(0,0,0,0) 70%);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0.5494572829131652) 55%, rgba(0,0,0,0.01724439775910369) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.5494572829131652) 55%, rgba(0,0,0,0.01724439775910369) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.5494572829131652) 55%, rgba(0,0,0,0.01724439775910369) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
   }
 `;
@@ -40,6 +43,9 @@ export const Logo = styled.div`
       letter-spacing: -2px;
     }
   }
+  @media only screen and (min-width: 930px) {
+    color: white;
+  }
 `;
 
 export const Options = styled.div`
@@ -55,6 +61,9 @@ export const NavLink = styled(Link)`
   margin-right: 10px;
   &:last-child {
     margin-right: 0;
+  }
+  @media only screen and (min-width: 930px) {
+    color: white;
   }
   @media only screen and (min-width: 1275px) {
     margin-right: 20px;

@@ -5,13 +5,20 @@ import { HiOutlineShoppingBag, HiUserCircle } from 'react-icons/hi';
 import { Logo, Nav, Options, NavbarContainer, NavLink, Links, LinksContainer } from './styles';
 import MobileMenu from './Mobile/MobileMenu';
 import LogoFrame from '../../assets/bg-frames/LogoFrame.svg';
+import LogoFrameWhite from '../../assets/bg-frames/LogoFrameWhite.svg';
 
 const Navbar = ({ bg }) => {
   return (
     <NavbarContainer bg={bg}>
       <Nav>
         {window.innerWidth >= 930 ? (
-          <IconContext.Provider value={{ size: '1.8em', title: 'User', color: '14142B' }}>
+          <IconContext.Provider
+            value={
+              window.innerWidth < 930
+                ? { size: '1.5em', title: 'Menu', color: '14142B' }
+                : { size: '1.5em', title: 'Menu', color: 'FFFFFF' }
+            }
+          >
             <NavLink to='/user'>
               <HiUserCircle style={{ marginRight: '5px' }} />
               {window.innerWidth >= 1024 && <p>Usuario</p>}
@@ -21,17 +28,23 @@ const Navbar = ({ bg }) => {
           <MobileMenu />
         )}
         <div style={{ display: 'flex' }}>
-          <img src={LogoFrame} />
+          {window.innerWidth >= 930 ? <img src={LogoFrameWhite} /> : <img src={LogoFrame} />}
           <Logo>
             <h1>FAA</h1>
             <p>
               <span>--------</span> Clothes
             </p>
           </Logo>
-          <img src={LogoFrame} />
+          {window.innerWidth >= 930 ? <img src={LogoFrameWhite} /> : <img src={LogoFrame} />}
         </div>
         <Options>
-          <IconContext.Provider value={{ size: '1.5em', title: 'Menu', color: '14142B' }}>
+          <IconContext.Provider
+            value={
+              window.innerWidth < 930
+                ? { size: '1.5em', title: 'Menu', color: '14142B' }
+                : { size: '1.5em', title: 'Menu', color: 'FFFFFF' }
+            }
+          >
             <Links>
               <NavLink to='/search'>
                 <RiSearch2Line style={{ marginRight: '5px' }} />
