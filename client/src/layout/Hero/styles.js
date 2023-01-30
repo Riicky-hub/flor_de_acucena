@@ -79,8 +79,6 @@ export const Icon = styled.img`
   width: 15px;
 `;
 
-// TABLET STYLES
-
 export const HeroContainerDesktop = styled(HeroContainer)`
   padding: 0 10%;
   height: 450px;
@@ -138,10 +136,30 @@ export const FlowerFrame = styled.img`
   left: ${({ left }) => (left ? left : '')};
 `;
 
-// DESKTOP STYLES
-
 export const DisplayVideo = styled.video`
   width: 100%;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+`;
+
+export const DisplayText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0,0,0,0.30);
+  backdrop-filter: blur(2px);
+  padding: 30px;
+  box-shadow: 0px 0px 60px 44px rgba(0,0,0,0.30);
+  -webkit-box-shadow: 0px 0px 60px 44px rgba(0,0,0,0.30);
+  -moz-box-shadow: 0px 0px 60px 44px rgba(0,0,0,0.30);
+  h1 {
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    padding-bottom: 20px;
+    line-height: 1.3em;
+  }
 `;

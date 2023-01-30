@@ -17,6 +17,7 @@ import {
   HeroImgFrame,
   FlowerFrame,
   DisplayVideo,
+  DisplayText,
 } from './styles';
 import heroModel from '../../assets/models/Hero.png';
 import HeroModelDesktop from '../../assets/models/HeroDesktop.png';
@@ -74,9 +75,15 @@ const Hero = () => {
     );
   } else {
     DisplayContent = (
-      <DisplayVideo poster={VideoPoster} autoPlay muted loop>
-        <source src={VideoSource} type='video/mp4' />
-      </DisplayVideo>
+      <>
+        <DisplayVideo poster={VideoPoster} autoPlay muted loop>
+          <source src={VideoSource} type='video/mp4' />
+        </DisplayVideo>
+        <DisplayText>
+          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+          <HeroButton>Explore Collection</HeroButton>
+        </DisplayText>
+      </>
     );
   }
   return (

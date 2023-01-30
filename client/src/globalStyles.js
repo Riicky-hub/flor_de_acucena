@@ -118,7 +118,7 @@ export const Title = styled.h2`
 export const Button = styled.button`
   cursor: pointer;
   padding: ${({ padding }) => (padding ? padding : '12px 33px')};
-  font-size: clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);
+  font-size: clamp(0.875rem, 0.625rem + 1vw, 1rem);
   background: ${({ transparent }) => (transparent ? 'transparent' : `${OffBlack}`)};
   color: ${({ transparent }) => (transparent ? `${OffBlack}` : `${OffWhite}`)};
   border: ${({ border, config }) => (border ? `border: ${config};` : `none`)};
