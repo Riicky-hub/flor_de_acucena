@@ -89,7 +89,7 @@ const ParagraphSize = ({ size }) => {
     case 'sm':
       return 'clamp(0.75rem, 0.5278rem + 0.8889vw, 1.25rem);';
     case 'md':
-      return 'clamp(0.875rem, 0.625rem + 1vw, 1.4375rem);';
+      return 'clamp(0.875rem, 0.625rem + 1vw, 1.1rem);';
     case 'bg':
       return 'clamp(1rem, 0.7222rem + 1.1111vw, 1.625rem);';
     default:

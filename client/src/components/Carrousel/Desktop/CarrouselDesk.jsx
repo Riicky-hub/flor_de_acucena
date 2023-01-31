@@ -6,7 +6,7 @@ import first from '../../../assets/models/DesktopCarrousel/first.jpg';
 import second from '../../../assets/models/DesktopCarrousel/second.jpg';
 import third from '../../../assets/models/DesktopCarrousel/third.jpg';
 import fourth from '../../../assets/models/DesktopCarrousel/fourth.jpg';
-import { Label } from '../../../constants/colors';
+import { Label, Secondary, TitleColor, Primary } from '../../../constants/colors';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -21,7 +21,7 @@ import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper';
 
 function swiperConfigDesktop() {
   if (window.innerWidth >= 1900) {
-    return 2;
+    return 2.1;
   } else if (window.innerWidth >= 1485) {
     return 1.5;
   } else {
@@ -52,7 +52,7 @@ const CarrouselDesk = () => {
         >
           <SwiperSlide>
             <Container
-              title='Hello world'
+              title='First Collection'
               paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque?'
               src={first}
               bg={Label}
@@ -60,26 +60,26 @@ const CarrouselDesk = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Container
-              title='Hello world'
+              title='Second Collection'
               paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque?'
               src={second}
-              bg={Label}
+              bg={Primary}
             />
           </SwiperSlide>
           <SwiperSlide>
             <Container
-              title='Hello world'
+              title='Third Collection'
               paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque?'
               src={third}
-              bg={Label}
+              bg={TitleColor}
             />
           </SwiperSlide>
           <SwiperSlide>
             <Container
-              title='Hello world'
+              title='Fouth Collection'
               paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque?'
               src={fourth}
-              bg={Label}
+              bg={Secondary}
             />
           </SwiperSlide>
         </Swiper>

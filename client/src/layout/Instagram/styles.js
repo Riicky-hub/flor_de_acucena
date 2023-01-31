@@ -31,4 +31,7 @@ export const InstagramGrid = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
+  @media screen and (min-width: 1270px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 `;

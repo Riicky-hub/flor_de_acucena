@@ -22,6 +22,12 @@ const Instagram = () => {
         ) : (
           <></>
         )}
+        {window.innerWidth >= 1270 && (
+          <>
+            <InstagramPost img={model2} user='_jihyn' />
+            <InstagramPost img={model3} user='mia' />
+          </>
+        )}
       </InstagramGrid>
     </InstagramContainer>
   );
