@@ -66,6 +66,14 @@ const NewArrival = () => {
         <Product productImg={girl2} productTitle='21WN reversible angora cardigan' productPrice={120} />
         <Product productImg={girl3} productTitle='21WN reversible angora cardigan' productPrice={120} />
         <Product productImg={girl4} productTitle='21WN reversible angora cardigan' productPrice={120} />
+        {window.innerWidth >= 1080 && (
+          <>
+            <Product productImg={girl1} productTitle='21WN reversible angora cardigan' productPrice={120} />
+            <Product productImg={girl2} productTitle='21WN reversible angora cardigan' productPrice={120} />
+            <Product productImg={girl3} productTitle='21WN reversible angora cardigan' productPrice={120} />
+            <Product productImg={girl4} productTitle='21WN reversible angora cardigan' productPrice={120} />
+          </>
+        )}
       </ProductsContainer>
       <ExploreButton transparent>
         Explore More <img src={forwardArrow} />

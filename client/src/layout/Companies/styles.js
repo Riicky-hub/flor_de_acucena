@@ -16,4 +16,8 @@ export const LogosContainer = styled.div`
   align-items: center;
   padding-bottom: 25px;
   padding-top: 25px;
+  @media only screen and (min-width: 1080px) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 `;

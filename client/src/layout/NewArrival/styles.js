@@ -17,6 +17,9 @@ export const NewArrivalButton = styled(Button)`
 
 export const NewArrivalText = styled(Title)`
   letter-spacing: 3.5px;
+  @media only screen and (min-width: 1080px) {
+    padding-bottom: 10px;
+  }
 `;
 
 export const TextsContainer = styled.div`
@@ -26,6 +29,9 @@ export const TextsContainer = styled.div`
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  @media only screen and (min-width: 1080px) {
+    padding: 10px 0 12px 0;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -48,6 +54,10 @@ export const ProductsContainer = styled(Container)`
   @media only screen and (min-width: 880px) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
+  }
+  @media only screen and (min-width: 1080px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 `;
 
