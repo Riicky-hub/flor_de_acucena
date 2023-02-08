@@ -21,7 +21,7 @@
 
 
 
-## Funcionalidades
+## Funcionalidades ⚙️
 
 - Multiplataforma
 - Multidesign
@@ -36,7 +36,8 @@
 - Dashboard para ADM
 - Formatos de pagamento
 - Filtrar/Reorganizar/Pesquisar produtos
-## Referência
+
+## Referência 🔖
 #### *- Tento fazer sempre meus projetos, respeitando a propriedade intelectual de seus devidos criadores*
 ### Images(Pexels):  
 - [Nguyễn Thanh Ngọc](https://www.pexels.com/pt-br/foto/silhueta-de-mulher-asiatica-atras-de-um-galho-de-arvore-perto-do-oceano-infinito-3995673/)
@@ -56,7 +57,7 @@
 ### Example Video(Youtube):  
 - [Cojocaru Pavel](https://www.youtube.com/watch?v=A0ZTru3Xk3E&ab_channel=CojocaruPavel)
 
-## Feedback
+## Feedback 📖
 
 Se você tiver algum feedback, por favor nos deixe saber por meio de richardjosephace1960@gmail.com
 
