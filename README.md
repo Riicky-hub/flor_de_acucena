@@ -1,7 +1,7 @@
 
 # Flor de açucena 🌸 (In development)
 
-- Acesse: https://flordeacucena.netlify.app/
+- Acesse: https://flor-de-acucena.vercel.app/
 - Projeto para criação de um e-commerce de roupas feita de tricô e crochê, produzidas por mulheres alagoanas que querem expandir o négocio!
 
 ## Screenshots 📷
